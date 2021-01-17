@@ -1,0 +1,53 @@
+.submit-form-cta {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.form-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 600px) {
+  .form-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form-input {
+    width: 100%;
+  }
+
+  .button {
+    display: inline-block;
+  }
+}
+
+.pricing-card {
+  /* box-shadow: 0px 1px 10px rgba(120, 118, 118, 0.25); */
+  max-width: 287px;
+}
+
+@media (max-width: 600px) {
+  .pricing-card {
+    box-shadow: 0px 1px 10px rgba(120, 118, 118, 0.25);
+    max-width: 100%;
+    margin: 0 10%;
+  }
+}
+
+.cd-logo {
+  border-bottom: 1px solid rgba(120, 118, 118, 0.25);
+}
+
+.card-button {
+  scale: 0.8;
+}
+
+.access > p {
+  scale: 0.96;
+}
