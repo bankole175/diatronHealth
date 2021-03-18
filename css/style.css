@@ -1578,15 +1578,15 @@ button:not(:disabled) {
 }
 
 .nav-pills .nav-link {
-  color: #495057 !important;
+  color: #8492a6 !important;
   padding: 5px;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 
 .nav-pills .nav-link.active {
-  background: #2f55d4;
-  color: #ffffff !important;
+  background: #e9eef1;
+  color: #353e44 !important;
 }
 
 .nav-pills .nav-link.active .tab-para {
