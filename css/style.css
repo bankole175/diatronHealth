@@ -4140,7 +4140,7 @@ p {
   right: 0;
   bottom: 0;
   left: 0;
-  opacity: 0;
+  opacity: 0.60;
   z-index: 1;
 }
 
@@ -4152,7 +4152,7 @@ p {
 
 .work-container.work-modern .content,
 .work-container.work-modern .client {
-  opacity: 0;
+  opacity: 1;
 }
 
 .work-container.work-modern .client,
@@ -4175,7 +4175,7 @@ p {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   z-index: 2;
-  opacity: 0;
+  opacity: 1;
 }
 
 .work-container.work-modern .icons .work-icon {
@@ -4266,7 +4266,7 @@ p {
   right: 0;
   bottom: 0;
   left: 0;
-  opacity: 0;
+  opacity: 1;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
