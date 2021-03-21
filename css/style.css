@@ -2698,6 +2698,9 @@ p {
   #topnav .logo .l-light {
     display: none !important;
   }
+  #topnav .buy-button {
+    display: none !important;
+  }
   #topnav .container {
     width: auto;
   }
@@ -2802,6 +2805,11 @@ p {
   #navigation.open {
     display: block;
     overflow-y: auto;
+  }
+  #topnav .buy-menu-btn {
+    display: block !important;
+    margin: 0 10px;
+    padding: 10px 20px;
   }
 }
 
