@@ -107,6 +107,8 @@
 
   // scroll to div
 
+  // $('body').scrollspy({ target: '#navbar-example'}).fadeIn();
+
   $(function() {
 
     var link = $('#navigation a.dot');

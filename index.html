@@ -68,12 +68,12 @@
                 <!--                <img src="images/logo-light.png" class="l-light" height="24" alt="">-->
             </a>
         </div>
-        <!--        <div class="buy-button">-->
-        <!--            <a href="https://1.envato.market/4n73n" target="_blank">-->
-        <!--                <div class="btn btn-primary login-btn-primary">Buy Now</div>-->
-        <!--                <div class="btn btn-light login-btn-light">Buy Now</div>-->
-        <!--            </a>-->
-        <!--        </div>-->
+        <div class="buy-button">
+            <a href="#heroEarlyAccess" onclick="shakeEmail()">
+                <div class="btn btn-primary login-btn-primary shadow">Get early access!</div>
+                <div class="btn btn-light login-btn-light">Get early access!</div>
+            </a>
+        </div>
         <!--end login button-->
         <!-- End Logo container-->
         <div class="menu-extras">
@@ -95,20 +95,23 @@
             <ul class="navigation-menu nav-light">
                 <li><a href="index.html">Home</a></li>
                 <li class="has-submenu">
-                    <a data-scroll="problem" href="#problem">Problem</a>
+                    <a data-scroll="patients" href="#patients">Patients</a>
                 </li>
 
                 <li class="has-submenu">
-                    <a data-scroll="solution" href="#solution">Solution</a>
+                    <a data-scroll="solution" href="#providers">Provider</a>
                 </li>
                 <li class="has-submenu">
-                    <a data-scroll="believe" href="#believe">Our stand</a>
+                    <a data-scroll="believe" href="#payers">Payers</a>
+                </li>
+                <li class="has-submenu">
+                    <a data-scroll="believe" href="#employers">Employers</a>
                 </li>
             </ul>
             <!--end navigation menu-->
-            <!--            <div class="buy-menu-btn d-none">-->
-            <!--                <a href="https://1.envato.market/4n73n" target="_blank" class="btn btn-primary">Buy Now</a>-->
-            <!--            </div>-->
+            <div class="buy-menu-btn d-none">
+                <a href="#heroEarlyAccess" class="btn btn-primary">Early Access</a>
+            </div>
             <!--end login button-->
         </div>
         <!--end navigation-->
@@ -120,7 +123,7 @@
 
 <!-- Hero Start -->
 <section class="bg-half-170 pb-0 mt-n5 bg-primary d-table w-100" style="background: url('images/bg2.png') center center;">
-    <div class="container">
+    <div class="container" id="heroEarlyAccess">
         <div class="row align-items-center">
             <div class="col-lg-7 col-md-6">
                 <div class="title-heading">
@@ -130,7 +133,7 @@
                     <div>
                         <form>
                             <div class="form-inline">
-                                <input type="text" class="form-control shadow mr-3 mb-3" placeholder="enter your email">
+                                <input type="email" class="form-control shadow mr-3 mb-3" placeholder="enter your email" required id="Subscriber-Email">
                                 <button class="btn btn-light shadow mb-3" style="padding: 8px">Get early access!</button>
                             </div>
                         </form>
@@ -399,7 +402,7 @@
 </section>
 
 
-<section class="section">
+<section class="section" id="patients">
     <div class="container">
         <h2 class="text-center mt-n5">Our Solution</h2>
         <h4 class="title mb-n1">For Patients</h4>
@@ -659,7 +662,7 @@
     </div>
 </section>
 
-<section class="section bg-light">
+<section class="section bg-light" id="providers">
     <div class="container">
         <h4 class="title mb-4">For Providers</h4>
         <div class="row align-items-center mt-100 mt-60">
@@ -728,9 +731,9 @@
 <!--    </div>-->
 <!--</section>-->
 
-<section id="bloodPressure" class="section">
+<section class="section" id="payers">
     <div class="container">
-        <h4>For Health Payers</h4>
+        <h4>For Payers</h4>
         <div class="row align-items-center mt-100 mt-60">
             <div class="col-lg-6 col-md-6 mt-4 mt-lg-0 pt- pt-lg-0">
                 <div class="ml-lg-4">
@@ -803,7 +806,7 @@
 <!--    </div>-->
 <!--</section>-->
 
-<section class="section bg-light">
+<section class="section bg-light" id="employers">
     <div class="container">
         <h4 class="">For Employer</h4>
         <div class="row align-items-center mt-100 mt-60">
@@ -861,8 +864,8 @@
         <div class="row justify-content-center">
             <div class="col-12">
                 <div class="section-title text-center mb-4 pb-2">
-                    <h6 class="text-primary">Our Believe</h6>
-                    <h4 class="title mb-4">What do we stand for ?</h4>
+                    <h4 class="title mb-4 text-primary">Our Believe</h4>
+<!--                    <h4 class="title mb-4">What do we stand for ?</h4>-->
                     <p class="text-muted para-desc mx-auto mb-0">
                         We believe that chronic condition should not limit or make people feel disabled or be a liability
                         or a reason not to live like everyone. We believe that chronic condition should enable human,
@@ -1154,7 +1157,7 @@
                         <div class="col-lg-2 col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
                             <h4 class="text-light footer-head">Company</h4>
                             <ul class="list-unstyled footer-list mt-4">
-                                <li><a href="javascript:void(0)" class="text-foot">Blog</a></li>
+                                <li><a href="javascript:void(0)" class="text-foot check">Blog</a></li>
                             </ul>
                         </div>
                         <!--end col-->
@@ -1253,6 +1256,12 @@
 <script src="https://unicons.iconscout.com/release/v2.1.9/script/monochrome/bundle.js"></script>
 <!-- Main Js -->
 <script src="js/app.js"></script>
+<script>
+    function shakeEmail(){
+        document.getElementById("Subscriber-Email").focus();
+        document.getElementById("Subscriber-Email").select();
+    }
+</script>
 </body>
 
 </html>

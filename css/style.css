@@ -4903,4 +4903,8 @@ p {
 li::marker {
   color: #5369F8;
 }
+
+html {
+  scroll-behavior: smooth;
+}
 /*# sourceMappingURL=style.css.map */
