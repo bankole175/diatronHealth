@@ -4916,3 +4916,23 @@ html {
   scroll-behavior: smooth;
 }
 /*# sourceMappingURL=style.css.map */
+
+@media (min-width: 400px) {
+  .pad_man {
+    padding-left: 40px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .p_left {
+    padding-left: 50px;
+  }
+
+  .m_Top {
+    margin-top: -80px;
+  }
+
+  .pad_man {
+    width: 320px;
+  }
+}

@@ -40,8 +40,25 @@
     <!-- Main Css -->
     <link href="css/style.css" rel="stylesheet" type="text/css" id="theme-opt" />
     <link href="css/colors/default.css" rel="stylesheet" id="color-opt">
-    <link rel="stylesheet" href="https://unpkg.com/pageable@latest/dist/pageable.min.css">
-    <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/d1a69896a214e5675206c02de/58071c89fbe0f063baf85c649.js");</script>
+    <link rel="stylesheet" href="js/plugins/example.css">
+    <style type="text/css">
+        #pinContainer {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            -webkit-perspective: 1000;
+            perspective: 1000;
+        }
+        #slideContainer {
+            width: 400%; /* to contain 4 panels, each with 100% of window width */
+            height: 100%;
+        }
+        .panel {
+            height: 100%;
+            width: 25%; /* relative to parent -> 25% of 400% = 100% of window width */
+            float: left;
+        }
+    </style>
 </head>
 
 <body>
@@ -101,12 +118,12 @@
                 <li class="has-submenu">
                     <a data-scroll="solution" href="#providers">Provider</a>
                 </li>
-                <li class="has-submenu">
-                    <a data-scroll="believe" href="#payers">Payers</a>
-                </li>
-                <li class="has-submenu">
-                    <a data-scroll="believe" href="#employers">Employers</a>
-                </li>
+<!--                <li class="has-submenu">-->
+<!--                    <a data-scroll="believe" href="#payers">Payers</a>-->
+<!--                </li>-->
+<!--                <li class="has-submenu">-->
+<!--                    <a data-scroll="believe" href="#employers">Employers</a>-->
+<!--                </li>-->
             </ul>
             <!--end navigation menu-->
             <div class="buy-menu-btn d-none">
@@ -125,12 +142,39 @@
 <section class="bg-half-170 pb-0 mt-n5 bg-primary d-table w-100" style="background: url('images/bg2.png') center center;">
     <div class="container" id="heroEarlyAccess">
         <div class="row align-items-center">
-            <div class="col-lg-7 col-md-6">
+            <div class="col-lg-8 col-md-6 d-md-none">
                 <div class="title-heading">
-                    <h4 class="text-white">Together we can</h4>
-                    <h4 class="heading text-white title-dark">Own our life, own our time and live healthier without limitation </h4>
-                    <!--                    <p class="para-desc text-white-50">Launch your campaign and benefit from our expertise on designing and managing conversion centered bootstrap4 html page.</p>-->
+<!--                    <h4 class="text-white">Together we can</h4>-->
+                    <h4 class="heading text-white title-dark">Make your loved ones and health care provider worry less </h4>
+                        <p class="para-desc" style="color: rgba(255, 255, 255, 0.9)">
+                            One platform that connects to all data sources, enabling loved ones, healthcare professional, health coach to
+                            remotely monitor and ensure timely interventions, reduced emergency visits, reduced treatment costs,
+                            personalized care and advice for you while you own and control your health.
+                        </p>
                     <div>
+                        <form>
+                            <div class="form-inline">
+                                <input type="email" class="form-control shadow mr-3 mb-3" placeholder="enter your email" required id="Subscriber-Email">
+                                <button class="btn btn-light shadow mb-3" style="padding: 8px">Get early access!</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-8 col-md-6 mt-lg-n6 d-none d-md-block m_Top" style="">
+                <div class="title-heading">
+                    <!--                    <h4 class="text-white">Together we can</h4>-->
+                    <h4 class="heading text-white title-dark">Make your loved ones and <br> health care provide worry <br> less</h4>
+                    <p class="para-desc" style="color: rgba(255, 255, 255, 0.9)">
+                        One platform that connects to all data sources, enabling loved ones, healthcare professional, health coach to
+                        remotely monitor and ensure timely interventions, reduced emergency visits, reduced treatment costs,
+                        personalized care and advice for you while you own and control your health.
+<!--                        We've made it easier to integrate with your medical IoT device to make your data accessible and-->
+<!--                        ensure timely interventions, reduced emergency visits, reduced treatment costs,-->
+<!--                        receive personalized care and advice.-->
+                    </p>
+                    <div style="">
                         <form>
                             <div class="form-inline">
                                 <input type="email" class="form-control shadow mr-3 mb-3" placeholder="enter your email" required id="Subscriber-Email">
@@ -142,8 +186,8 @@
             </div>
             <!--end col-->
 
-            <div class="col-lg-5 col-md-6 mt-5 mt-sm-0">
-                <img src="https://res.cloudinary.com/bhankypsalm/image/upload/e_grayscale/v1602810341/pexels-august-de-richelieu-4262424_wyfunx.jpg" class="img-fluid" alt="">
+            <div class="col-lg-4 col-md-6 mb-5 mt-sm-0 pr-0 mt-lg-n3 p_left">
+                <img src="images/diatron/dia-home.png" class="img-fluid mr-0 pad_man" alt="">
             </div>
         </div>
         <!--end row-->
@@ -153,6 +197,630 @@
 <!--end section-->
 <!-- Hero End -->
 
+<div id="pinContainer" class="d-none d-md-block">
+    <div id="slideContainer">
+        <section class="panel">
+            <div class="container">
+                <div class="row align-items-center my-5">
+                    <div class="col-lg-4 col-md-6 row">
+                        <img src="images/diatron/integration.png" alt="" class="img-fluid">
+                        <!--                                <img src="images/diatron/dia-dashboard.png" alt="" class="img-fluid col-md-6">-->
+                    </div>
+                    <!--end col-->
+
+                    <div class="col-lg-8 col-md-6 mt-4 mt-lg-0 pt- pt-lg-0">
+                        <div class="ml-lg-4">
+                            <div class="section-title mb-4 pb-2">
+                                <h4 class="title mb-n1">All your health data in one place. </h4>
+                            </div>
+                            <p class="text-muted mt-3">
+                                We’ve made it easier for patients to integrate with their IoT medical devices
+                                like glucometer, blood pressure monitor, scale, wearables and other IoT devices
+                                to track and make health data and vitals available in real-time.
+                            </p>
+                            <div>
+                                <form>
+                                    <div class="form-inline">
+                                        <input type="text" class="form-control mr-3 mb-3" placeholder="enter your email">
+                                        <button class="btn btn-primary mb-3" style="padding: 8px">Get early access!</button>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <!--                        <div class="watch-video mt-4 pt-2">-->
+                            <!--                            <a href="https://1.envato.market/4n73n" target="_blank" class="btn btn-primary mb-2">Read More <i data-feather="chevron-right" class="fea icon-sm"></i></a>-->
+                            <!--                            <a href="https://www.youtube.com/watch?v=jNTZpfXYJa4" class="video-play-icon watch text-dark mb-2 ml-2"><i class="mdi mdi-play play-icon-circle text-center d-inline-block mr-2 rounded-circle title-dark text-white position-relative play play-iconbar"></i> Watch Video !</a>-->
+                            <!--                        </div>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="panel">
+            <div class="container">
+                <div class="row align-items-center my-5">
+                    <div class="col-lg-4 col-md-6 row">
+                        <img src="images/diatron/log.png" alt="" class="img-fluid">
+                        <!--                                <img src="images/diatron/dia-dashboard.png" alt="" class="img-fluid col-md-6">-->
+                    </div>
+                    <!--end col-->
+
+                    <div class="col-lg-8 col-md-6 mt-4 mt-lg-0 pt- pt-lg-0">
+                        <div class="ml-lg-4">
+                            <div class="section-title mb-4 pb-2">
+                                <h4 class="title mb-n1">Let go of assumptions</h4>
+                            </div>
+                            <p class="text-muted mt-3">
+                                Get an overview of your results, see details about a specific day or result. Take away the risk of assumption,
+                                make personalized decisions, share records with your healthcare professional and loved ones.
+                            </p>
+                            <div>
+                                <form>
+                                    <div class="form-inline">
+                                        <input type="text" class="form-control mr-3 mb-3" placeholder="enter your email">
+                                        <button class="btn btn-primary mb-3" style="padding: 8px">Get early access!</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--                        <div class="watch-video mt-4 pt-2">-->
+                    <!--                            <a href="https://1.envato.market/4n73n" target="_blank" class="btn btn-primary mb-2">Read More <i data-feather="chevron-right" class="fea icon-sm"></i></a>-->
+                    <!--                            <a href="https://www.youtube.com/watch?v=jNTZpfXYJa4" class="video-play-icon watch text-dark mb-2 ml-2"><i class="mdi mdi-play play-icon-circle text-center d-inline-block mr-2 rounded-circle title-dark text-white position-relative play play-iconbar"></i> Watch Video !</a>-->
+                    <!--                        </div>-->
+                </div>
+            </div>
+        </section>
+        <section class="panel">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 col-md-6 row">
+                        <img src="images/diatron/predict.png" alt="" class="img-fluid">
+                    </div>
+                    <!--end col-->
+
+                    <div class="col-lg-8 col-md-6 mt-4 mt-lg-0 pt- pt-lg-0">
+                        <div class="ml-lg-4">
+                            <div class="section-title mb-4 pb-2">
+                                <h4 class="title mb-n1">Know where you are headed</h4>
+                            </div>
+                            <p class="text-muted">
+                                Meet Zuri our AI bot driven bot that notify you of the future that is unknown to you, let you know if you are at
+                                the risk of developing any chronic condition, provide automated advice, help
+                                you avoid crises and late diagnosis, also connecting users to specialists for health advice.
+                            </p>
+                            <div>
+                                <form>
+                                    <div class="form-inline">
+                                        <input type="text" class="form-control mr-3 mb-3" placeholder="enter your email">
+                                        <button class="btn btn-primary mb-3" style="padding: 8px">Get early access!</button>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <!--                        <div class="watch-video mt-4 pt-2">-->
+                            <!--                            <a href="https://1.envato.market/4n73n" target="_blank" class="btn btn-primary mb-2">Read More <i data-feather="chevron-right" class="fea icon-sm"></i></a>-->
+                            <!--                            <a href="https://www.youtube.com/watch?v=jNTZpfXYJa4" class="video-play-icon watch text-dark mb-2 ml-2"><i class="mdi mdi-play play-icon-circle text-center d-inline-block mr-2 rounded-circle title-dark text-white position-relative play play-iconbar"></i> Watch Video !</a>-->
+                            <!--                        </div>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="panel">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 col-md-6 row">
+                        <img src="images/diatron/statistics_details.png" alt="" class="img-fluid">
+                        <!--                                <img src="images/diatron/dia-dashboard.png" alt="" class="img-fluid col-md-6">-->
+                    </div>
+                    <!--end col-->
+
+                    <div class="col-lg-8 col-md-6 mt-4 mt-lg-0 pt- pt-lg-0">
+                        <div class="ml-lg-4">
+                            <div class="section-title mb-4 pb-2">
+                                <h4 class="title mb-n1">Analyze your data right in the app</h4>
+                            </div>
+                            <p class="text-muted mt-3">
+                                Medical data is translated into simple, readable, and insightful information making interpretations easy for patients.
+                            </p>
+                            <div>
+                                <form>
+                                    <div class="form-inline">
+                                        <input type="text" class="form-control mr-3 mb-3" placeholder="enter your email">
+                                        <button class="btn btn-primary mb-3" style="padding: 8px">Get early access!</button>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <!--                        <div class="watch-video mt-4 pt-2">-->
+                            <!--                            <a href="https://1.envato.market/4n73n" target="_blank" class="btn btn-primary mb-2">Read More <i data-feather="chevron-right" class="fea icon-sm"></i></a>-->
+                            <!--                            <a href="https://www.youtube.com/watch?v=jNTZpfXYJa4" class="video-play-icon watch text-dark mb-2 ml-2"><i class="mdi mdi-play play-icon-circle text-center d-inline-block mr-2 rounded-circle title-dark text-white position-relative play play-iconbar"></i> Watch Video !</a>-->
+                            <!--                        </div>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="panel">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 col-md-6 row">
+                        <img src="images/diatron/dia-home.png" alt="" class="img-fluid">
+                        <!--                                <img src="images/diatron/dia-dashboard.png" alt="" class="img-fluid col-md-6">-->
+                    </div>
+                    <!--end col-->
+
+                    <div class="col-lg-8 col-md-6 mt-4 mt-lg-0 pt- pt-lg-0">
+                        <div class="ml-lg-4">
+                            <div class="section-title mb-4 pb-2">
+                                <h4 class="title mb-n1">We will be there down every road</h4>
+                            </div>
+                            <small class="mt-n5">Not with a chatbot, <span class="text-primary h6">A real certified health professionals with years of experience helping people with chronic conditions</span></small>
+                            <p class="text-muted mt-3">
+                                No Hospital queue, No appointment needed, talk to our coaches who love to hear from you anytime or request a callback.
+                            </p>
+                            <p class="text-muted">
+                                Our coaches offer personalized advise, help you understand your health, set and
+                                reach goals, adjust your diet, find an exercise routine you’ll love, learn how
+                                to manage stress, and more.
+                            </p>
+                            <div>
+                                <form>
+                                    <div class="form-inline">
+                                        <input type="text" class="form-control mr-3 mb-3" placeholder="enter your email">
+                                        <button class="btn btn-primary mb-3" style="padding: 8px">Get early access!</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <!--                        <div class="watch-video mt-4 pt-2">-->
+                            <!--                            <a href="https://1.envato.market/4n73n" target="_blank" class="btn btn-primary mb-2">Read More <i data-feather="chevron-right" class="fea icon-sm"></i></a>-->
+                            <!--                            <a href="https://www.youtube.com/watch?v=jNTZpfXYJa4" class="video-play-icon watch text-dark mb-2 ml-2"><i class="mdi mdi-play play-icon-circle text-center d-inline-block mr-2 rounded-circle title-dark text-white position-relative play play-iconbar"></i> Watch Video !</a>-->
+                            <!--                        </div>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+
+
+<section class="section d-md-none" id="patients">
+    <div class="container">
+<!--        <h2 class="text-center mt-n5">Our Solution</h2>-->
+        <h4 class="title mb-n1">For Patients</h4>
+        <div class="row mt-100 mt-60">
+            <div class="col-md-4 mt-4 pt-2">
+                <ul class="nav nav-pills nav-justified flex-column bg-white p-3 mb-0 sticky-bar" id="pills-tab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link rounded active" id="webdeveloping" data-toggle="pill" href="#developing" role="tab" aria-controls="developing" aria-selected="false">
+                            <div class="pt-1 pb-1 d-flex align-items-center">
+                                <div><i class="uil uil-globe h2 mr-2"></i></div>
+                                <h6 class="text-left title font-weight-normal mb-0">
+                                    Integration & Tracking
+                                </h6>
+                            </div>
+                        </a><!--end nav link-->
+                    </li><!--end nav item-->
+
+                    <li class="nav-item mt-2">
+                        <a class="nav-link rounded" id="database" data-toggle="pill" href="#data-analise" role="tab" aria-controls="data-analise" aria-selected="false">
+                            <div class="pt-1 pb-1 d-flex align-items-center">
+                                <div><i class="uil uil-servers h2 mr-2"></i></div>
+                                <h6 class="text-left title font-weight-normal mb-0">
+                                    Log book
+                                </h6>
+                            </div>
+                        </a><!--end nav link-->
+                    </li><!--end nav item-->
+
+                    <li class="nav-item mt-2">
+                        <a class="nav-link rounded" id="server" data-toggle="pill" href="#security" role="tab" aria-controls="security" aria-selected="false">
+                            <div class="pt-1 pb-1 d-flex align-items-center">
+                                <div><i class="uil uil-chart h2 mr-2"></i></div>
+                                <h6 class="text-left title font-weight-normal mb-0">
+                                    Statistics
+                                </h6>
+                            </div>
+                        </a><!--end nav link-->
+                    </li><!--end nav item-->
+
+                    <li class="nav-item mt-2">
+                        <a class="nav-link rounded" id="analysis" data-toggle="pill" href="#predictive" role="tab" aria-controls="predictive" aria-selected="false">
+                            <div class="pt-1 pb-1 d-flex align-items-center">
+                                <div><i class="uil uil-analytics h2 mr-2"></i></div>
+                                <h6 class="text-left title font-weight-normal mb-0">
+                                    Predictive analysis
+                                </h6>
+                            </div>
+                        </a><!--end nav link-->
+                    </li><!--end nav item-->
+
+                    <li class="nav-item mt-2">
+                        <a class="nav-link rounded" id="webdesigning" data-toggle="pill" href="#designing" role="tab" aria-controls="designing" aria-selected="false">
+                            <div class="pt-1 pb-1 d-flex align-items-center">
+                                <div><i class="uil uil-comment-alt-dots h2 mr-2"></i></div>
+                                <h6 class="text-left title font-weight-normal mb-0">
+                                    Coaching
+                                </h6>
+                            </div>
+                        </a><!--end nav link-->
+                    </li><!--end nav item-->
+                </ul><!--end nav pills-->
+            </div><!--end col-->
+
+            <div class="col-md-8 col-12 mt-4 pt-2">
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade bg-white p-4 show active" id="developing" role="tabpanel" aria-labelledby="webdeveloping">
+                        <div class="row align-items-center">
+                            <div class="col-lg-4 col-md-6 row">
+                                <img src="images/diatron/integration.png" alt="" class="img-fluid">
+                                <!--                                <img src="images/diatron/dia-dashboard.png" alt="" class="img-fluid col-md-6">-->
+                            </div>
+                            <!--end col-->
+
+                            <div class="col-lg-8 col-md-6 mt-4 mt-lg-0 pt- pt-lg-0">
+                                <div class="ml-lg-4">
+                                    <div class="section-title mb-4 pb-2">
+                                        <h4 class="title mb-n1">All your health data in one place. </h4>
+                                    </div>
+                                    <p class="text-muted mt-3">
+                                        We’ve made it easier for patients to integrate with their IoT medical devices
+                                        like glucometer, blood pressure monitor, scale, wearables and other IoT devices
+                                        to track and make health data and vitals available in real-time.
+                                    </p>
+                                    <div>
+                                        <form>
+                                            <div class="form-inline">
+                                                <input type="text" class="form-control mr-3 mb-3" placeholder="enter your email">
+                                                <button class="btn btn-primary mb-3" style="padding: 8px">Get early access!</button>
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                    <!--                        <div class="watch-video mt-4 pt-2">-->
+                                    <!--                            <a href="https://1.envato.market/4n73n" target="_blank" class="btn btn-primary mb-2">Read More <i data-feather="chevron-right" class="fea icon-sm"></i></a>-->
+                                    <!--                            <a href="https://www.youtube.com/watch?v=jNTZpfXYJa4" class="video-play-icon watch text-dark mb-2 ml-2"><i class="mdi mdi-play play-icon-circle text-center d-inline-block mr-2 rounded-circle title-dark text-white position-relative play play-iconbar"></i> Watch Video !</a>-->
+                                    <!--                        </div>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--end teb pane-->
+
+                    <div class="tab-pane fade bg-white p-4" id="data-analise" role="tabpanel" aria-labelledby="database">
+                        <div class="row align-items-center">
+                            <div class="col-lg-4 col-md-6 row">
+                                <img src="images/diatron/log.png" alt="" class="img-fluid">
+                                <!--                                <img src="images/diatron/dia-dashboard.png" alt="" class="img-fluid col-md-6">-->
+                            </div>
+                            <!--end col-->
+
+                            <div class="col-lg-8 col-md-6 mt-4 mt-lg-0 pt- pt-lg-0">
+                                <div class="ml-lg-4">
+                                    <div class="section-title mb-4 pb-2">
+                                        <h4 class="title mb-n1">Let go of assumptions</h4>
+                                    </div>
+                                    <p class="text-muted mt-3">
+                                        Get an overview of your results, see details about a specific day or result. Take away the risk of assumption,
+                                        make personalized decisions, share records with your healthcare professional and loved ones.
+                                    </p>
+                                    <div>
+                                        <form>
+                                            <div class="form-inline">
+                                                <input type="text" class="form-control mr-3 mb-3" placeholder="enter your email">
+                                                <button class="btn btn-primary mb-3" style="padding: 8px">Get early access!</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                                    <!--                        <div class="watch-video mt-4 pt-2">-->
+                                    <!--                            <a href="https://1.envato.market/4n73n" target="_blank" class="btn btn-primary mb-2">Read More <i data-feather="chevron-right" class="fea icon-sm"></i></a>-->
+                                    <!--                            <a href="https://www.youtube.com/watch?v=jNTZpfXYJa4" class="video-play-icon watch text-dark mb-2 ml-2"><i class="mdi mdi-play play-icon-circle text-center d-inline-block mr-2 rounded-circle title-dark text-white position-relative play play-iconbar"></i> Watch Video !</a>-->
+                                    <!--                        </div>-->
+                                </div>
+                    </div><!--end teb pane-->
+
+                    <div class="tab-pane fade bg-white p-4" id="predictive" role="tabpanel" aria-labelledby="analysis">
+                        <div class="row align-items-center">
+                            <div class="col-lg-4 col-md-6 row">
+                                <img src="images/diatron/predict.png" alt="" class="img-fluid">
+                            </div>
+                            <!--end col-->
+
+                            <div class="col-lg-8 col-md-6 mt-4 mt-lg-0 pt- pt-lg-0">
+                                <div class="ml-lg-4">
+                                    <div class="section-title mb-4 pb-2">
+                                        <h4 class="title mb-n1">Know where you are headed</h4>
+                                    </div>
+                                    <p class="text-muted">
+                                        Meet Zuri our AI bot driven bot that notify you of the future that is unknown to you, let you know if you are at
+                                        the risk of developing any chronic condition, provide automated advice, help
+                                        you avoid crises and late diagnosis, also connecting users to specialists for health advice.
+                                    </p>
+                                    <div>
+                                        <form>
+                                            <div class="form-inline">
+                                                <input type="text" class="form-control mr-3 mb-3" placeholder="enter your email">
+                                                <button class="btn btn-primary mb-3" style="padding: 8px">Get early access!</button>
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                    <!--                        <div class="watch-video mt-4 pt-2">-->
+                                    <!--                            <a href="https://1.envato.market/4n73n" target="_blank" class="btn btn-primary mb-2">Read More <i data-feather="chevron-right" class="fea icon-sm"></i></a>-->
+                                    <!--                            <a href="https://www.youtube.com/watch?v=jNTZpfXYJa4" class="video-play-icon watch text-dark mb-2 ml-2"><i class="mdi mdi-play play-icon-circle text-center d-inline-block mr-2 rounded-circle title-dark text-white position-relative play play-iconbar"></i> Watch Video !</a>-->
+                                    <!--                        </div>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--end teb pane-->
+
+                    <div class="tab-pane fade bg-white p-4" id="security" role="tabpanel" aria-labelledby="server">
+                        <div class="row align-items-center">
+                            <div class="col-lg-4 col-md-6 row">
+                                <img src="images/diatron/statistics_details.png" alt="" class="img-fluid">
+                                <!--                                <img src="images/diatron/dia-dashboard.png" alt="" class="img-fluid col-md-6">-->
+                            </div>
+                            <!--end col-->
+
+                            <div class="col-lg-8 col-md-6 mt-4 mt-lg-0 pt- pt-lg-0">
+                                <div class="ml-lg-4">
+                                    <div class="section-title mb-4 pb-2">
+                                        <h4 class="title mb-n1">Analyze your data right in the app</h4>
+                                    </div>
+                                    <p class="text-muted mt-3">
+                                        Medical data is translated into simple, readable, and insightful information making interpretations easy for patients.
+                                    </p>
+                                    <div>
+                                        <form>
+                                            <div class="form-inline">
+                                                <input type="text" class="form-control mr-3 mb-3" placeholder="enter your email">
+                                                <button class="btn btn-primary mb-3" style="padding: 8px">Get early access!</button>
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                    <!--                        <div class="watch-video mt-4 pt-2">-->
+                                    <!--                            <a href="https://1.envato.market/4n73n" target="_blank" class="btn btn-primary mb-2">Read More <i data-feather="chevron-right" class="fea icon-sm"></i></a>-->
+                                    <!--                            <a href="https://www.youtube.com/watch?v=jNTZpfXYJa4" class="video-play-icon watch text-dark mb-2 ml-2"><i class="mdi mdi-play play-icon-circle text-center d-inline-block mr-2 rounded-circle title-dark text-white position-relative play play-iconbar"></i> Watch Video !</a>-->
+                                    <!--                        </div>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--end teb pane-->
+
+                    <div class="tab-pane fade bg-white p-4" id="designing" role="tabpanel" aria-labelledby="webdesigning">
+                        <div class="row align-items-center">
+                            <div class="col-lg-4 col-md-6 row">
+                                <img src="images/diatron/dia-home.png" alt="" class="img-fluid">
+<!--                                <img src="images/diatron/dia-dashboard.png" alt="" class="img-fluid col-md-6">-->
+                            </div>
+                            <!--end col-->
+
+                            <div class="col-lg-8 col-md-6 mt-4 mt-lg-0 pt- pt-lg-0">
+                                <div class="ml-lg-4">
+                                    <div class="section-title mb-4 pb-2">
+                                        <h4 class="title mb-n1">We will be there down every road</h4>
+                                    </div>
+                                    <small class="mt-n5">Not with a chatbot, <span class="text-primary h6">A real certified health professionals with years of experience helping people with chronic conditions</span></small>
+                                    <p class="text-muted mt-3">
+                                        No Hospital queue, No appointment needed, talk to our coaches who love to hear from you anytime or request a callback.
+                                    </p>
+                                    <p class="text-muted">
+                                        Our coaches offer personalized advise, help you understand your health, set and
+                                        reach goals, adjust your diet, find an exercise routine you’ll love, learn how
+                                        to manage stress, and more.
+                                    </p>
+                                    <div>
+                                        <form>
+                                            <div class="form-inline">
+                                                <input type="text" class="form-control mr-3 mb-3" placeholder="enter your email">
+                                                <button class="btn btn-primary mb-3" style="padding: 8px">Get early access!</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <!--                        <div class="watch-video mt-4 pt-2">-->
+                                    <!--                            <a href="https://1.envato.market/4n73n" target="_blank" class="btn btn-primary mb-2">Read More <i data-feather="chevron-right" class="fea icon-sm"></i></a>-->
+                                    <!--                            <a href="https://www.youtube.com/watch?v=jNTZpfXYJa4" class="video-play-icon watch text-dark mb-2 ml-2"><i class="mdi mdi-play play-icon-circle text-center d-inline-block mr-2 rounded-circle title-dark text-white position-relative play play-iconbar"></i> Watch Video !</a>-->
+                                    <!--                        </div>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--end teb pane-->
+                </div>
+        <!--end tab content-->
+            </div><!--end col-->
+        </div>
+    </div>
+</section>
+
+<section class="section bg-light" id="providers">
+    <div class="container">
+        <h4 class="title mb-4">For Providers</h4>
+        <div class="row align-items-center mt-100 mt-60">
+            <div class="col-lg-6 col-md-6">
+                <img src="images/diatron/dia-dashboard.png" alt="" class="img-fluid">
+            </div>
+            <!--end col-->
+
+            <div class="col-lg-6 col-md-6 mt-4 mt-lg-0 pt- pt-lg-0">
+                <div class="ml-lg-4">
+                    <div class="section-title mb-4 pb-2">
+                        <h4 class="title mb-4">One cap doesn't fit all</h4>
+                    </div>
+                    <p class="text-muted">
+                        When treating Chronic condition one cap doesn't fit all, our analytics software provides relevant
+                        insight that helps the caregiver to personalize treatment/advice, monitor their patient remotely,
+                        access their vitals, lab result, medication history, get notified when your patient test result
+                        is high or low and provide feedback real-time which enable you to efficiently extend your practice,
+                        improve clinical outcomes and increase revenue per year.
+                    </p>
+                    <button class="btn btn-outline-primary">Contact Us</button>
+                </div>
+            </div>
+        </div>
+        <!--end row-->
+    </div>
+</section>
+
+<!--<section class="section bg-light">-->
+<!--    <div class="container mt-100 mt-60">-->
+<!--        <div class="row align-items-center">-->
+<!--            <div class="col-lg-6 col-md-6">-->
+<!--                <img src="images/diatron/Scale.svg" alt="" class="img-fluid">-->
+<!--            </div>-->
+<!--            &lt;!&ndash;end col&ndash;&gt;-->
+
+<!--            <div class="col-lg-6 col-md-6 mt-4 mt-lg-0 pt- pt-lg-0">-->
+<!--                <div class="ml-lg-4">-->
+<!--                    <div class="section-title mb-4 pb-2">-->
+<!--                        <h4 class="title mb-4">Why Diatron Scale</h4>-->
+<!--                        <p class="text-muted">-->
+<!--                            Being overweight or obese increases a person's risk for developing type 2 diabetes. Also, weight gain in people with type 2 diabetes makes blood sugar levels even harder to control. With Diatron scale we can:-->
+<!--                            &lt;!&ndash;                                Unlike a traditional glucometer where after test is taken user do not have access to their record again. Diatron glucometer allow you to:&ndash;&gt;-->
+<!--                        </p>-->
+<!--                        <ul class="list_prob">-->
+<!--                            <li class="text-muted para-desc">Keep our blood sugar in balance, live healthier and have more energy</li>-->
+<!--                            <li class="text-muted para-desc">Decrease our chances of developing complications from Diabetes like heart disease</li>-->
+<!--                            <li class="text-muted para-desc">Know when to keep the pounds off and when not to</li>-->
+<!--                            <li class="text-muted para-desc">Take away the risk of assumption</li>-->
+<!--                            <li class="text-muted para-desc">Make personalized decision</li>-->
+<!--                            <li class="text-muted para-desc">Live happier, celebrate more, cut your healthcare cost</li>-->
+<!--                        </ul>-->
+<!--                        <p class="text-muted">-->
+<!--                            When you check your body weight, the result is stored, the result is used to know what to do and not to do, shared with loved ones, health practitioner, for personalized monitoring/treatment.-->
+<!--                        </p>-->
+<!--                    </div>-->
+
+<!--                    &lt;!&ndash;                        <div class="watch-video mt-4 pt-2">&ndash;&gt;-->
+<!--                    &lt;!&ndash;                            <a href="https://1.envato.market/4n73n" target="_blank" class="btn btn-primary mb-2">Read More <i data-feather="chevron-right" class="fea icon-sm"></i></a>&ndash;&gt;-->
+<!--                    &lt;!&ndash;                            <a href="https://www.youtube.com/watch?v=jNTZpfXYJa4" class="video-play-icon watch text-dark mb-2 ml-2"><i class="mdi mdi-play play-icon-circle text-center d-inline-block mr-2 rounded-circle title-dark text-white position-relative play play-iconbar"></i> Watch Video !</a>&ndash;&gt;-->
+<!--                    &lt;!&ndash;                        </div>&ndash;&gt;-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        &lt;!&ndash;end row&ndash;&gt;-->
+<!--    </div>-->
+<!--</section>-->
+
+<!--<section class="section" id="payers">-->
+<!--    <div class="container">-->
+<!--        <h4>For Payers</h4>-->
+<!--        <div class="row align-items-center mt-100 mt-60">-->
+<!--            <div class="col-lg-6 col-md-6 mt-4 mt-lg-0 pt- pt-lg-0">-->
+<!--                <div class="ml-lg-4">-->
+<!--                    <div class="section-title mb-4 pb-2">-->
+<!--                        <h4>Gear up to tackle the rising cost of chronic condition care</h4>-->
+<!--                        <p class="text-muted">-->
+<!--                            Regular use of Diatron by patients and doctors ensures timely interventions,-->
+<!--                            reduced emergency visits and saves on treatment costs.-->
+<!--                            It allows you to empower your members and reduce claims.-->
+<!--                        </p>-->
+<!--                        <button class="btn btn-outline-primary">Contact us to know more</button>-->
+<!--&lt;!&ndash;                        Identify at-risk patients to provide proactive outreach&ndash;&gt;-->
+<!--&lt;!&ndash;                        Understand real world outcomes related to diabetes and how patient populations respond to specific interventions&ndash;&gt;-->
+<!--&lt;!&ndash;                        integrate glooko into your existing EHR&ndash;&gt;-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="col-lg-4 offset-md-2 col-md-4">-->
+<!--                <img src="images/diatron/dia-home.png" alt="" class="img-fluid">-->
+<!--            </div>-->
+<!--            &lt;!&ndash;end col&ndash;&gt;-->
+<!--        </div>-->
+<!--        &lt;!&ndash;end row&ndash;&gt;-->
+<!--    </div>-->
+<!--</section>-->
+
+
+<!--<section id="bloodPressure" class="section">-->
+<!--    <div class="container mt-100 mt-60">-->
+<!--        <div class="row align-items-center">-->
+<!--            <div class="col-lg-6 col-md-6 mt-4 mt-lg-0 pt- pt-lg-0">-->
+<!--                <div class="ml-lg-4">-->
+<!--                    <div class="section-title mb-4 pb-2">-->
+<!--                        <h4>Your health at your fingertip</h4>-->
+<!--                        <p class="text-muted">-->
+<!--                            In Africa, high blood pressure(Hypertension) is responsible for more than half of first time acute stroke.-->
+<!--                        </p>-->
+<!--                        <p class="text-muted">-->
+<!--                            Hypertension can lead to many complications of diabetes, including diabetic eye disease and kidney disease, or make them worse.-->
+<!--                            You don't have to worry, we will help you to:-->
+<!--                        </p>-->
+<!--                        <ul class="list_prob">-->
+<!--                            <li class="text-muted para-desc">Discover masked high blood pressure</li>-->
+<!--                            <li class="text-muted para-desc">Early diagnosis of high blood pressure</li>-->
+<!--                            <li class="text-muted para-desc">Know the exercise/activity that triggers your blood pressure</li>-->
+<!--                            <li class="text-muted para-desc">Be responsible for your health, feel more motivated to-->
+<!--                                control your blood pressure with an improved diet, physical activity and proper medication-->
+<!--                            </li>-->
+<!--                            <li class="text-muted para-desc">Take away the risk of assumption which has led to lot of untimely death</li>-->
+<!--                            <li class="text-muted para-desc">Make personalized decision</li>-->
+<!--                            <li class="text-muted para-desc">Live happier, celebrate more, cut your healthcare cost</li>-->
+<!--                        </ul>-->
+<!--                        <p class="text-muted">-->
+<!--                            When you check your blood pressure, the result is stored, the result is used to know what to do and not to do, shared with loved ones, health practitioner, for personalized monitoring/treatment.-->
+<!--                        </p>-->
+<!--                    </div>-->
+
+<!--                    &lt;!&ndash;                        <div class="watch-video mt-4 pt-2">&ndash;&gt;-->
+<!--                    &lt;!&ndash;                            <a href="https://1.envato.market/4n73n" target="_blank" class="btn btn-primary mb-2">Read More <i data-feather="chevron-right" class="fea icon-sm"></i></a>&ndash;&gt;-->
+<!--                    &lt;!&ndash;&ndash;&gt;-->
+<!--                    &lt;!&ndash;                        </div>&ndash;&gt;-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="col-lg-6 col-md-6">-->
+<!--                <img src="images/diatron/bloodP.png" alt="" class="img-fluid">-->
+<!--            </div>-->
+<!--            &lt;!&ndash;end col&ndash;&gt;-->
+<!--        </div>-->
+<!--        &lt;!&ndash;end row&ndash;&gt;-->
+<!--    </div>-->
+<!--</section>-->
+
+<!--<section class="section bg-light" id="employers">-->
+<!--    <div class="container">-->
+<!--        <h4 class="">For Employer</h4>-->
+<!--        <div class="row align-items-center mt-100 mt-60">-->
+<!--            <div class="col-lg-6 col-md-6 row">-->
+<!--                <img src="images/diatron/dia-home.png" alt="" class="img-fluid col-md-6">-->
+<!--                <img src="images/diatron/dia-dashboard.png" alt="" class="img-fluid col-md-6">-->
+<!--            </div>-->
+<!--            &lt;!&ndash;end col&ndash;&gt;-->
+
+<!--            <div class="col-lg-6 col-md-6 mt-4 mt-lg-0 pt- pt-lg-0">-->
+<!--                <div class="ml-lg-4">-->
+<!--                    <div class="section-title mb-4 pb-2">-->
+<!--                        <h4 class="title mb-n1">Improve employee health and reduce the cost of care</h4>-->
+<!--                        <p class="text-muted mt-3">-->
+<!--                            Behaviour is a predominant driver of chronic disease.-->
+<!--                            Diatron transforms behaviour and provides personalized care that makes engaged employee-->
+<!--                            healthy and more productive.-->
+<!--                        </p>-->
+<!--                        <p class="text-muted">-->
+<!--                            Our coaches help the employee to understand their health, set and reach goals, adjust their diet,-->
+<!--                            find an exercise routine they’ll love, learn how to manage stress, live healthier-->
+<!--                            and be more productive.-->
+<!--                        </p>-->
+<!--                        <div class="text-muted">Would you like to increase your employee productivity, make them live heathier, increase your revenue and reduce your cost of care?.</div>-->
+<!--                        <button class="btn btn-outline-primary">Contact Us</button>-->
+<!--                    </div>-->
+
+<!--                    &lt;!&ndash;                        <div class="watch-video mt-4 pt-2">&ndash;&gt;-->
+<!--                    &lt;!&ndash;                            <a href="https://1.envato.market/4n73n" target="_blank" class="btn btn-primary mb-2">Read More <i data-feather="chevron-right" class="fea icon-sm"></i></a>&ndash;&gt;-->
+<!--                    &lt;!&ndash;                            <a href="https://www.youtube.com/watch?v=jNTZpfXYJa4" class="video-play-icon watch text-dark mb-2 ml-2"><i class="mdi mdi-play play-icon-circle text-center d-inline-block mr-2 rounded-circle title-dark text-white position-relative play play-iconbar"></i> Watch Video !</a>&ndash;&gt;-->
+<!--                    &lt;!&ndash;                        </div>&ndash;&gt;-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        &lt;!&ndash;end row&ndash;&gt;-->
+<!--    </div>-->
+<!--</section>-->
 
 <section class="section" style="margin-bottom: 30px; margin-top: 30px">
     <div class="container">
@@ -401,450 +1069,6 @@
     </div>
 </section>
 
-
-<section class="section" id="patients">
-    <div class="container">
-        <h2 class="text-center mt-n5">Our Solution</h2>
-        <h4 class="title mb-n1">For Patients</h4>
-        <div class="row mt-100 mt-60">
-            <div class="col-md-4 mt-4 pt-2">
-                <ul class="nav nav-pills nav-justified flex-column bg-white p-3 mb-0 sticky-bar" id="pills-tab" role="tablist">
-                    <li class="nav-item">
-                        <a class="nav-link rounded active" id="webdeveloping" data-toggle="pill" href="#developing" role="tab" aria-controls="developing" aria-selected="false">
-                            <div class="pt-1 pb-1 d-flex align-items-center">
-                                <div><i class="uil uil-globe h2 mr-2"></i></div>
-                                <h6 class="text-left title font-weight-normal mb-0">
-                                    Integration & Tracking
-                                </h6>
-                            </div>
-                        </a><!--end nav link-->
-                    </li><!--end nav item-->
-
-                    <li class="nav-item mt-2">
-                        <a class="nav-link rounded" id="database" data-toggle="pill" href="#data-analise" role="tab" aria-controls="data-analise" aria-selected="false">
-                            <div class="pt-1 pb-1 d-flex align-items-center">
-                                <div><i class="uil uil-servers h2 mr-2"></i></div>
-                                <h6 class="text-left title font-weight-normal mb-0">
-                                    Log book
-                                </h6>
-                            </div>
-                        </a><!--end nav link-->
-                    </li><!--end nav item-->
-
-                    <li class="nav-item mt-2">
-                        <a class="nav-link rounded" id="server" data-toggle="pill" href="#security" role="tab" aria-controls="security" aria-selected="false">
-                            <div class="pt-1 pb-1 d-flex align-items-center">
-                                <div><i class="uil uil-chart h2 mr-2"></i></div>
-                                <h6 class="text-left title font-weight-normal mb-0">
-                                    Statistics
-                                </h6>
-                            </div>
-                        </a><!--end nav link-->
-                    </li><!--end nav item-->
-
-                    <li class="nav-item mt-2">
-                        <a class="nav-link rounded" id="analysis" data-toggle="pill" href="#predictive" role="tab" aria-controls="predictive" aria-selected="false">
-                            <div class="pt-1 pb-1 d-flex align-items-center">
-                                <div><i class="uil uil-analytics h2 mr-2"></i></div>
-                                <h6 class="text-left title font-weight-normal mb-0">
-                                    Predictive analysis
-                                </h6>
-                            </div>
-                        </a><!--end nav link-->
-                    </li><!--end nav item-->
-
-                    <li class="nav-item mt-2">
-                        <a class="nav-link rounded" id="webdesigning" data-toggle="pill" href="#designing" role="tab" aria-controls="designing" aria-selected="false">
-                            <div class="pt-1 pb-1 d-flex align-items-center">
-                                <div><i class="uil uil-comment-alt-dots h2 mr-2"></i></div>
-                                <h6 class="text-left title font-weight-normal mb-0">
-                                    Coaching
-                                </h6>
-                            </div>
-                        </a><!--end nav link-->
-                    </li><!--end nav item-->
-                </ul><!--end nav pills-->
-            </div><!--end col-->
-
-            <div class="col-md-8 col-12 mt-4 pt-2">
-                <div class="tab-content" id="pills-tabContent">
-                    <div class="tab-pane fade bg-white p-4 show active" id="developing" role="tabpanel" aria-labelledby="webdeveloping">
-                        <div class="row align-items-center">
-                            <div class="col-lg-4 col-md-6 row">
-                                <img src="images/diatron/dia-home.png" alt="" class="img-fluid">
-                                <!--                                <img src="images/diatron/dia-dashboard.png" alt="" class="img-fluid col-md-6">-->
-                            </div>
-                            <!--end col-->
-
-                            <div class="col-lg-8 col-md-6 mt-4 mt-lg-0 pt- pt-lg-0">
-                                <div class="ml-lg-4">
-                                    <div class="section-title mb-4 pb-2">
-                                        <h4 class="title mb-n1">All your health data in one place. </h4>
-                                    </div>
-                                    <p class="text-muted mt-3">
-                                        Seamlessly integrate with all your Accu-chek glucometer, Omron blood pressure monitor
-                                        and other IoT devices. Track and record your health data and vitals in real-time,
-                                        update your loved ones, caregiver and reduce care cost.
-                                        <span class="text-primary font-weight-bold">All in one place</span>.
-                                    </p>
-                                    <div>
-                                        <form>
-                                            <div class="form-inline">
-                                                <input type="text" class="form-control mr-3 mb-3" placeholder="enter your email">
-                                                <button class="btn btn-primary mb-3" style="padding: 8px">Get early access!</button>
-                                            </div>
-                                        </form>
-                                    </div>
-
-                                    <!--                        <div class="watch-video mt-4 pt-2">-->
-                                    <!--                            <a href="https://1.envato.market/4n73n" target="_blank" class="btn btn-primary mb-2">Read More <i data-feather="chevron-right" class="fea icon-sm"></i></a>-->
-                                    <!--                            <a href="https://www.youtube.com/watch?v=jNTZpfXYJa4" class="video-play-icon watch text-dark mb-2 ml-2"><i class="mdi mdi-play play-icon-circle text-center d-inline-block mr-2 rounded-circle title-dark text-white position-relative play play-iconbar"></i> Watch Video !</a>-->
-                                    <!--                        </div>-->
-                                </div>
-                            </div>
-                        </div>
-                    </div><!--end teb pane-->
-
-                    <div class="tab-pane fade bg-white p-4" id="data-analise" role="tabpanel" aria-labelledby="database">
-                        <div class="row align-items-center">
-                            <div class="col-lg-4 col-md-6 row">
-                                <img src="images/diatron/dia-home.png" alt="" class="img-fluid">
-                                <!--                                <img src="images/diatron/dia-dashboard.png" alt="" class="img-fluid col-md-6">-->
-                            </div>
-                            <!--end col-->
-
-                            <div class="col-lg-8 col-md-6 mt-4 mt-lg-0 pt- pt-lg-0">
-                                <div class="ml-lg-4">
-                                    <div class="section-title mb-4 pb-2">
-                                        <h4 class="title mb-n1">Let go of assumptions</h4>
-                                    </div>
-                                    <p class="text-muted mt-3">
-                                        Get an overview of your blood glucose, blood pressure, weight and heart rate trends.
-                                        See details about a specific day or result. Take away the risk of assumption,
-                                        make personalized decisions and share records with your healthcare professional and loved ones.
-                                    </p>
-                                    <div>
-                                        <form>
-                                            <div class="form-inline">
-                                                <input type="text" class="form-control mr-3 mb-3" placeholder="enter your email">
-                                                <button class="btn btn-primary mb-3" style="padding: 8px">Get early access!</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-
-                                    <!--                        <div class="watch-video mt-4 pt-2">-->
-                                    <!--                            <a href="https://1.envato.market/4n73n" target="_blank" class="btn btn-primary mb-2">Read More <i data-feather="chevron-right" class="fea icon-sm"></i></a>-->
-                                    <!--                            <a href="https://www.youtube.com/watch?v=jNTZpfXYJa4" class="video-play-icon watch text-dark mb-2 ml-2"><i class="mdi mdi-play play-icon-circle text-center d-inline-block mr-2 rounded-circle title-dark text-white position-relative play play-iconbar"></i> Watch Video !</a>-->
-                                    <!--                        </div>-->
-                                </div>
-                    </div><!--end teb pane-->
-
-                    <div class="tab-pane fade bg-white p-4" id="predictive" role="tabpanel" aria-labelledby="analysis">
-                        <div class="row align-items-center">
-                            <div class="col-lg-4 col-md-6 row">
-                                <img src="images/diatron/dia-home.png" alt="" class="img-fluid">
-                                <!--                                <img src="images/diatron/dia-dashboard.png" alt="" class="img-fluid col-md-6">-->
-                            </div>
-                            <!--end col-->
-
-                            <div class="col-lg-8 col-md-6 mt-4 mt-lg-0 pt- pt-lg-0">
-                                <div class="ml-lg-4">
-                                    <div class="section-title mb-4 pb-2">
-                                        <h4 class="title mb-n1">Know where you are headed</h4>
-                                    </div>
-                                    <p class="text-muted mt-3">
-                                        Meet Zuri our AI bot powered by Artificial Intelligence and Data science
-                                    </p>
-                                    <p class="text-muted">
-                                        Meet Zuri our AI bot powered by Artificial Intelligence and Data Science.
-                                        Zuri notify you of the future that is unknown to you, let you know if you are at
-                                        the risk of developing any chronic condition, provide automated advice and help
-                                        you avoid crises and late diagnosis.
-                                    </p>
-                                    <div>
-                                        <form>
-                                            <div class="form-inline">
-                                                <input type="text" class="form-control mr-3 mb-3" placeholder="enter your email">
-                                                <button class="btn btn-primary mb-3" style="padding: 8px">Get early access!</button>
-                                            </div>
-                                        </form>
-                                    </div>
-
-                                    <!--                        <div class="watch-video mt-4 pt-2">-->
-                                    <!--                            <a href="https://1.envato.market/4n73n" target="_blank" class="btn btn-primary mb-2">Read More <i data-feather="chevron-right" class="fea icon-sm"></i></a>-->
-                                    <!--                            <a href="https://www.youtube.com/watch?v=jNTZpfXYJa4" class="video-play-icon watch text-dark mb-2 ml-2"><i class="mdi mdi-play play-icon-circle text-center d-inline-block mr-2 rounded-circle title-dark text-white position-relative play play-iconbar"></i> Watch Video !</a>-->
-                                    <!--                        </div>-->
-                                </div>
-                            </div>
-                        </div>
-                    </div><!--end teb pane-->
-
-                    <div class="tab-pane fade bg-white p-4" id="security" role="tabpanel" aria-labelledby="server">
-                        <div class="row align-items-center">
-                            <div class="col-lg-4 col-md-6 row">
-                                <img src="images/diatron/dia-home.png" alt="" class="img-fluid">
-                                <!--                                <img src="images/diatron/dia-dashboard.png" alt="" class="img-fluid col-md-6">-->
-                            </div>
-                            <!--end col-->
-
-                            <div class="col-lg-8 col-md-6 mt-4 mt-lg-0 pt- pt-lg-0">
-                                <div class="ml-lg-4">
-                                    <div class="section-title mb-4 pb-2">
-                                        <h4 class="title mb-n1">Analyze your data right in the app</h4>
-                                    </div>
-                                    <p class="text-muted mt-3">
-                                        Analyze your data over specified dates, times and tags. Get the average value of
-                                        your results. Share data with your loved ones and your healthcare professional.
-                                        Celebrate small win and keep building healthy habits.
-                                    </p>
-                                    <div>
-                                        <form>
-                                            <div class="form-inline">
-                                                <input type="text" class="form-control mr-3 mb-3" placeholder="enter your email">
-                                                <button class="btn btn-primary mb-3" style="padding: 8px">Get early access!</button>
-                                            </div>
-                                        </form>
-                                    </div>
-
-                                    <!--                        <div class="watch-video mt-4 pt-2">-->
-                                    <!--                            <a href="https://1.envato.market/4n73n" target="_blank" class="btn btn-primary mb-2">Read More <i data-feather="chevron-right" class="fea icon-sm"></i></a>-->
-                                    <!--                            <a href="https://www.youtube.com/watch?v=jNTZpfXYJa4" class="video-play-icon watch text-dark mb-2 ml-2"><i class="mdi mdi-play play-icon-circle text-center d-inline-block mr-2 rounded-circle title-dark text-white position-relative play play-iconbar"></i> Watch Video !</a>-->
-                                    <!--                        </div>-->
-                                </div>
-                            </div>
-                        </div>
-                    </div><!--end teb pane-->
-
-                    <div class="tab-pane fade bg-white p-4" id="designing" role="tabpanel" aria-labelledby="webdesigning">
-                        <div class="row align-items-center">
-                            <div class="col-lg-4 col-md-6 row">
-                                <img src="images/diatron/dia-home.png" alt="" class="img-fluid">
-<!--                                <img src="images/diatron/dia-dashboard.png" alt="" class="img-fluid col-md-6">-->
-                            </div>
-                            <!--end col-->
-
-                            <div class="col-lg-8 col-md-6 mt-4 mt-lg-0 pt- pt-lg-0">
-                                <div class="ml-lg-4">
-                                    <div class="section-title mb-4 pb-2">
-                                        <h4 class="title mb-n1">We will be there down every road</h4>
-                                    </div>
-                                    <small class="mt-n5">Not with a chatbot, <span class="text-primary h6">A real certified health professionals with years of experience helping people with chronic conditions</span></small>
-                                    <p class="text-muted mt-3">
-                                        No Hospital queue, No appointment needed, talk to our coaches who love to hear from you anytime or request a callback.
-                                    </p>
-                                    <p class="text-muted">
-                                        Our coaches offer personalized advise, help you understand your health, set and
-                                        reach goals, adjust your diet, find an exercise routine you’ll love, learn how
-                                        to manage stress, and more.
-                                    </p>
-                                    <div>
-                                        <form>
-                                            <div class="form-inline">
-                                                <input type="text" class="form-control mr-3 mb-3" placeholder="enter your email">
-                                                <button class="btn btn-primary mb-3" style="padding: 8px">Get early access!</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                    <!--                        <div class="watch-video mt-4 pt-2">-->
-                                    <!--                            <a href="https://1.envato.market/4n73n" target="_blank" class="btn btn-primary mb-2">Read More <i data-feather="chevron-right" class="fea icon-sm"></i></a>-->
-                                    <!--                            <a href="https://www.youtube.com/watch?v=jNTZpfXYJa4" class="video-play-icon watch text-dark mb-2 ml-2"><i class="mdi mdi-play play-icon-circle text-center d-inline-block mr-2 rounded-circle title-dark text-white position-relative play play-iconbar"></i> Watch Video !</a>-->
-                                    <!--                        </div>-->
-                                </div>
-                            </div>
-                        </div>
-                    </div><!--end teb pane-->
-                </div>
-        <!--end tab content-->
-            </div><!--end col-->
-        </div>
-    </div>
-</section>
-
-<section class="section bg-light" id="providers">
-    <div class="container">
-        <h4 class="title mb-4">For Providers</h4>
-        <div class="row align-items-center mt-100 mt-60">
-            <div class="col-lg-6 col-md-6">
-                <img src="images/diatron/dia-dashboard.png" alt="" class="img-fluid">
-            </div>
-            <!--end col-->
-
-            <div class="col-lg-6 col-md-6 mt-4 mt-lg-0 pt- pt-lg-0">
-                <div class="ml-lg-4">
-                    <div class="section-title mb-4 pb-2">
-                        <h4 class="title mb-4">One cap doesn't fit all</h4>
-                    </div>
-                    <p class="text-muted">
-                        When treating Chronic condition one cap doesn't fit all, our analytics software provides relevant
-                        insight that helps the caregiver to personalize treatment/advice, monitor their patient remotely,
-                        access their vitals, lab result, medication history, get notified when your patient test result
-                        is high or low and provide feedback real-time which enable you to efficiently extend your practice,
-                        improve clinical outcomes and increase revenue per year.
-                    </p>
-                    <button class="btn btn-outline-primary">Contact Us</button>
-                </div>
-            </div>
-        </div>
-        <!--end row-->
-    </div>
-</section>
-
-<!--<section class="section bg-light">-->
-<!--    <div class="container mt-100 mt-60">-->
-<!--        <div class="row align-items-center">-->
-<!--            <div class="col-lg-6 col-md-6">-->
-<!--                <img src="images/diatron/Scale.svg" alt="" class="img-fluid">-->
-<!--            </div>-->
-<!--            &lt;!&ndash;end col&ndash;&gt;-->
-
-<!--            <div class="col-lg-6 col-md-6 mt-4 mt-lg-0 pt- pt-lg-0">-->
-<!--                <div class="ml-lg-4">-->
-<!--                    <div class="section-title mb-4 pb-2">-->
-<!--                        <h4 class="title mb-4">Why Diatron Scale</h4>-->
-<!--                        <p class="text-muted">-->
-<!--                            Being overweight or obese increases a person's risk for developing type 2 diabetes. Also, weight gain in people with type 2 diabetes makes blood sugar levels even harder to control. With Diatron scale we can:-->
-<!--                            &lt;!&ndash;                                Unlike a traditional glucometer where after test is taken user do not have access to their record again. Diatron glucometer allow you to:&ndash;&gt;-->
-<!--                        </p>-->
-<!--                        <ul class="list_prob">-->
-<!--                            <li class="text-muted para-desc">Keep our blood sugar in balance, live healthier and have more energy</li>-->
-<!--                            <li class="text-muted para-desc">Decrease our chances of developing complications from Diabetes like heart disease</li>-->
-<!--                            <li class="text-muted para-desc">Know when to keep the pounds off and when not to</li>-->
-<!--                            <li class="text-muted para-desc">Take away the risk of assumption</li>-->
-<!--                            <li class="text-muted para-desc">Make personalized decision</li>-->
-<!--                            <li class="text-muted para-desc">Live happier, celebrate more, cut your healthcare cost</li>-->
-<!--                        </ul>-->
-<!--                        <p class="text-muted">-->
-<!--                            When you check your body weight, the result is stored, the result is used to know what to do and not to do, shared with loved ones, health practitioner, for personalized monitoring/treatment.-->
-<!--                        </p>-->
-<!--                    </div>-->
-
-<!--                    &lt;!&ndash;                        <div class="watch-video mt-4 pt-2">&ndash;&gt;-->
-<!--                    &lt;!&ndash;                            <a href="https://1.envato.market/4n73n" target="_blank" class="btn btn-primary mb-2">Read More <i data-feather="chevron-right" class="fea icon-sm"></i></a>&ndash;&gt;-->
-<!--                    &lt;!&ndash;                            <a href="https://www.youtube.com/watch?v=jNTZpfXYJa4" class="video-play-icon watch text-dark mb-2 ml-2"><i class="mdi mdi-play play-icon-circle text-center d-inline-block mr-2 rounded-circle title-dark text-white position-relative play play-iconbar"></i> Watch Video !</a>&ndash;&gt;-->
-<!--                    &lt;!&ndash;                        </div>&ndash;&gt;-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        &lt;!&ndash;end row&ndash;&gt;-->
-<!--    </div>-->
-<!--</section>-->
-
-<section class="section" id="payers">
-    <div class="container">
-        <h4>For Payers</h4>
-        <div class="row align-items-center mt-100 mt-60">
-            <div class="col-lg-6 col-md-6 mt-4 mt-lg-0 pt- pt-lg-0">
-                <div class="ml-lg-4">
-                    <div class="section-title mb-4 pb-2">
-                        <h4>Gear up to tackle the rising cost of chronic condition care</h4>
-                        <p class="text-muted">
-                            Regular use of Diatron by patients and doctors ensures timely interventions,
-                            reduced emergency visits and saves on treatment costs.
-                            It allows you to empower your members and reduce claims.
-                        </p>
-                        <button class="btn btn-outline-primary">Contact us to know more</button>
-<!--                        Identify at-risk patients to provide proactive outreach-->
-<!--                        Understand real world outcomes related to diabetes and how patient populations respond to specific interventions-->
-<!--                        integrate glooko into your existing EHR-->
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 offset-md-2 col-md-4">
-                <img src="images/diatron/dia-home.png" alt="" class="img-fluid">
-            </div>
-            <!--end col-->
-        </div>
-        <!--end row-->
-    </div>
-</section>
-
-
-<!--<section id="bloodPressure" class="section">-->
-<!--    <div class="container mt-100 mt-60">-->
-<!--        <div class="row align-items-center">-->
-<!--            <div class="col-lg-6 col-md-6 mt-4 mt-lg-0 pt- pt-lg-0">-->
-<!--                <div class="ml-lg-4">-->
-<!--                    <div class="section-title mb-4 pb-2">-->
-<!--                        <h4>Your health at your fingertip</h4>-->
-<!--                        <p class="text-muted">-->
-<!--                            In Africa, high blood pressure(Hypertension) is responsible for more than half of first time acute stroke.-->
-<!--                        </p>-->
-<!--                        <p class="text-muted">-->
-<!--                            Hypertension can lead to many complications of diabetes, including diabetic eye disease and kidney disease, or make them worse.-->
-<!--                            You don't have to worry, we will help you to:-->
-<!--                        </p>-->
-<!--                        <ul class="list_prob">-->
-<!--                            <li class="text-muted para-desc">Discover masked high blood pressure</li>-->
-<!--                            <li class="text-muted para-desc">Early diagnosis of high blood pressure</li>-->
-<!--                            <li class="text-muted para-desc">Know the exercise/activity that triggers your blood pressure</li>-->
-<!--                            <li class="text-muted para-desc">Be responsible for your health, feel more motivated to-->
-<!--                                control your blood pressure with an improved diet, physical activity and proper medication-->
-<!--                            </li>-->
-<!--                            <li class="text-muted para-desc">Take away the risk of assumption which has led to lot of untimely death</li>-->
-<!--                            <li class="text-muted para-desc">Make personalized decision</li>-->
-<!--                            <li class="text-muted para-desc">Live happier, celebrate more, cut your healthcare cost</li>-->
-<!--                        </ul>-->
-<!--                        <p class="text-muted">-->
-<!--                            When you check your blood pressure, the result is stored, the result is used to know what to do and not to do, shared with loved ones, health practitioner, for personalized monitoring/treatment.-->
-<!--                        </p>-->
-<!--                    </div>-->
-
-<!--                    &lt;!&ndash;                        <div class="watch-video mt-4 pt-2">&ndash;&gt;-->
-<!--                    &lt;!&ndash;                            <a href="https://1.envato.market/4n73n" target="_blank" class="btn btn-primary mb-2">Read More <i data-feather="chevron-right" class="fea icon-sm"></i></a>&ndash;&gt;-->
-<!--                    &lt;!&ndash;&ndash;&gt;-->
-<!--                    &lt;!&ndash;                        </div>&ndash;&gt;-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="col-lg-6 col-md-6">-->
-<!--                <img src="images/diatron/bloodP.png" alt="" class="img-fluid">-->
-<!--            </div>-->
-<!--            &lt;!&ndash;end col&ndash;&gt;-->
-<!--        </div>-->
-<!--        &lt;!&ndash;end row&ndash;&gt;-->
-<!--    </div>-->
-<!--</section>-->
-
-<section class="section bg-light" id="employers">
-    <div class="container">
-        <h4 class="">For Employer</h4>
-        <div class="row align-items-center mt-100 mt-60">
-            <div class="col-lg-6 col-md-6 row">
-                <img src="images/diatron/dia-home.png" alt="" class="img-fluid col-md-6">
-                <img src="images/diatron/dia-dashboard.png" alt="" class="img-fluid col-md-6">
-            </div>
-            <!--end col-->
-
-            <div class="col-lg-6 col-md-6 mt-4 mt-lg-0 pt- pt-lg-0">
-                <div class="ml-lg-4">
-                    <div class="section-title mb-4 pb-2">
-                        <h4 class="title mb-n1">Improve employee health and reduce the cost of care</h4>
-                        <p class="text-muted mt-3">
-                            Behaviour is a predominant driver of chronic disease.
-                            Diatron transforms behaviour and provides personalized care that makes engaged employee
-                            healthy and more productive.
-                        </p>
-                        <p class="text-muted">
-                            Our coaches help the employee to understand their health, set and reach goals, adjust their diet,
-                            find an exercise routine they’ll love, learn how to manage stress, live healthier
-                            and be more productive.
-                        </p>
-                        <div class="text-muted">Would you like to increase your employee productivity, make them live heathier, increase your revenue and reduce your cost of care?.</div>
-                        <button class="btn btn-outline-primary">Contact Us</button>
-                    </div>
-
-                    <!--                        <div class="watch-video mt-4 pt-2">-->
-                    <!--                            <a href="https://1.envato.market/4n73n" target="_blank" class="btn btn-primary mb-2">Read More <i data-feather="chevron-right" class="fea icon-sm"></i></a>-->
-                    <!--                            <a href="https://www.youtube.com/watch?v=jNTZpfXYJa4" class="video-play-icon watch text-dark mb-2 ml-2"><i class="mdi mdi-play play-icon-circle text-center d-inline-block mr-2 rounded-circle title-dark text-white position-relative play play-iconbar"></i> Watch Video !</a>-->
-                    <!--                        </div>-->
-                </div>
-            </div>
-        </div>
-        <!--end row-->
-    </div>
-</section>
-
 <!-- Start -->
 <section class="section pt-0">
     <div class="container">
@@ -901,7 +1125,7 @@
 
                     <div class="card-body">
                         <h4 class="title text-dark">Share</h4>
-                        <p class="text-muted mb-0">Make your loved one's, HCP worry less</p>
+                        <p class="text-muted mb-0">Make your loved ones, HCP worry less</p>
                         <p class="text-muted mb-0">Share real time data.</p>
                     </div>
                 </div>
@@ -1254,6 +1478,11 @@
 <!-- Icons -->
 <script src="js/feather.min.js"></script>
 <script src="https://unicons.iconscout.com/release/v2.1.9/script/monochrome/bundle.js"></script>
+<script type="text/javascript" src="js/plugins/tweenMax.js"></script>
+<script type="text/javascript" src="js/plugins/scrollMagic.js"></script>
+<script type="text/javascript" src="js/plugins/gsap.js"></script>
+<script type="text/javascript" src="js/plugins/indicator.js"></script>
+
 <!-- Main Js -->
 <script src="js/app.js"></script>
 <script>
@@ -1261,6 +1490,38 @@
         document.getElementById("Subscriber-Email").focus();
         document.getElementById("Subscriber-Email").select();
     }
+</script>
+<script>
+    $(function () { // wait for document ready
+        // init
+        var controller = new ScrollMagic.Controller();
+
+        // define movement of panels
+        var wipeAnimation = new TimelineMax()
+            // animate to second panel
+            .to("#slideContainer", 0.5, {z: -150})		// move back in 3D space
+            .to("#slideContainer", 1,   {x: "-25%"})	// move in to first panel
+            .to("#slideContainer", 0.5, {z: 0})				// move back to origin in 3D space
+            // animate to third panel
+            .to("#slideContainer", 0.5, {z: -150, delay: 1})
+            .to("#slideContainer", 1,   {x: "-50%"})
+            .to("#slideContainer", 0.5, {z: 0})
+            // animate to forth panel
+            .to("#slideContainer", 0.5, {z: -150, delay: 1})
+            .to("#slideContainer", 1,   {x: "-75%"})
+            .to("#slideContainer", 0.5, {z: 0})
+
+        // create scene to pin and link animation
+        new ScrollMagic.Scene({
+            triggerElement: "#pinContainer",
+            triggerHook: "onLeave",
+            duration: "500%"
+        })
+            .setPin("#pinContainer")
+            .setTween(wipeAnimation)
+            .addIndicators() // add indicators (requires plugin)
+            .addTo(controller);
+    });
 </script>
 </body>
 
