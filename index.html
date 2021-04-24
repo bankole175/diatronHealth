@@ -46,7 +46,6 @@
             width: 100%;
             height: 100%;
             overflow: hidden;
-            margin-bottom: 50px;
             -webkit-perspective: 1000;
             perspective: 1000;
         }
@@ -194,16 +193,16 @@
 <!--end section-->
 <!-- Hero End -->
 
-<div class="container" id="individual">
+<div class="container d-none d-md-block" id="individual">
     <h4 class="title mb-5 mt-100">For Individual</h4>
 </div>
 
-<div id="pinContainer" class="">
+<div id="pinContainer" class="d-none d-md-block">
     <div id="slideContainer">
         <section class="panel">
             <div class="container">
                 <div class="row align-items-center mt-100 mb-5">
-                    <div class="col-lg-6 col-md-6 d-none d-md-block">
+                    <div class="col-lg-6 col-md-6 row">
                         <img src="images/diatron/integration.png" alt="" class="img-fluid">
                         <!--                                <img src="images/diatron/dia-dashboard.png" alt="" class="img-fluid col-md-6">-->
                     </div>
@@ -240,7 +239,7 @@
         <section class="panel">
             <div class="container">
                 <div class="row align-items-center mt-100 mb-5">
-                    <div class="col-lg-6 col-md-6 d-none d-md-block">
+                    <div class="col-lg-6 col-md-6 row">
                         <img src="images/diatron/log.png" alt="" class="img-fluid">
                         <!--                                <img src="images/diatron/dia-dashboard.png" alt="" class="img-fluid col-md-6">-->
                     </div>
@@ -292,7 +291,7 @@
         <section class="panel">
             <div class="container">
                 <div class="row align-items-center mt-100 mb-5">
-                    <div class="col-lg-6 col-md-6 d-none d-md-block">
+                    <div class="col-lg-6 col-md-6 row">
                         <img src="images/diatron/predict.png" alt="" class="img-fluid">
                     </div>
                     <!--end col-->
@@ -328,7 +327,7 @@
         <section class="panel">
             <div class="container">
                 <div class="row align-items-center mt-100 mb-5">
-                    <div class="col-lg-6 col-md-6 d-none d-md-block">
+                    <div class="col-lg-6 col-md-6 row">
                         <img src="images/diatron/statistics_details.png" alt="" class="img-fluid">
                         <!--                                <img src="images/diatron/dia-dashboard.png" alt="" class="img-fluid col-md-6">-->
                     </div>
@@ -364,7 +363,7 @@
         <section class="panel">
             <div class="container">
                 <div class="row align-items-center mt-100 mb-5">
-                    <div class="col-lg-6 col-md-6 d-none d-md-block">
+                    <div class="col-lg-6 col-md-6 row">
                         <img src="images/diatron/dia-home.png" alt="" class="img-fluid">
                         <!--                                <img src="images/diatron/dia-dashboard.png" alt="" class="img-fluid col-md-6">-->
                     </div>
@@ -406,80 +405,14 @@
 
 
 
-<section class="section d-none" id="Individual">
-    <div class="container">
-<!--        <h2 class="text-center mt-n5">Our Solution</h2>-->
-        <h4 class="title mb-n1">For Individual</h4>
-        <div class="row mt-100 mt-60">
-            <div class="col-md-4 mt-4 pt-2">
-                <ul class="nav nav-pills nav-justified flex-column bg-white p-3 mb-0 sticky-bar" id="pills-tab" role="tablist">
-                    <li class="nav-item">
-                        <a class="nav-link rounded active" id="webdeveloping" data-toggle="pill" href="#developing" role="tab" aria-controls="developing" aria-selected="false">
-                            <div class="pt-1 pb-1 d-flex align-items-center">
-                                <div><i class="uil uil-globe h2 mr-2"></i></div>
-                                <h6 class="text-left title font-weight-normal mb-0">
-                                    Integration & Tracking
-                                </h6>
-                            </div>
-                        </a><!--end nav link-->
-                    </li><!--end nav item-->
-
-                    <li class="nav-item mt-2">
-                        <a class="nav-link rounded" id="database" data-toggle="pill" href="#data-analise" role="tab" aria-controls="data-analise" aria-selected="false">
-                            <div class="pt-1 pb-1 d-flex align-items-center">
-                                <div><i class="uil uil-servers h2 mr-2"></i></div>
-                                <h6 class="text-left title font-weight-normal mb-0">
-                                    Log book
-                                </h6>
-                            </div>
-                        </a><!--end nav link-->
-                    </li><!--end nav item-->
-
-                    <li class="nav-item mt-2">
-                        <a class="nav-link rounded" id="server" data-toggle="pill" href="#security" role="tab" aria-controls="security" aria-selected="false">
-                            <div class="pt-1 pb-1 d-flex align-items-center">
-                                <div><i class="uil uil-chart h2 mr-2"></i></div>
-                                <h6 class="text-left title font-weight-normal mb-0">
-                                    Statistics
-                                </h6>
-                            </div>
-                        </a><!--end nav link-->
-                    </li><!--end nav item-->
-
-                    <li class="nav-item mt-2">
-                        <a class="nav-link rounded" id="analysis" data-toggle="pill" href="#predictive" role="tab" aria-controls="predictive" aria-selected="false">
-                            <div class="pt-1 pb-1 d-flex align-items-center">
-                                <div><i class="uil uil-analytics h2 mr-2"></i></div>
-                                <h6 class="text-left title font-weight-normal mb-0">
-                                    Predictive analysis
-                                </h6>
-                            </div>
-                        </a><!--end nav link-->
-                    </li><!--end nav item-->
-
-                    <li class="nav-item mt-2">
-                        <a class="nav-link rounded" id="webdesigning" data-toggle="pill" href="#designing" role="tab" aria-controls="designing" aria-selected="false">
-                            <div class="pt-1 pb-1 d-flex align-items-center">
-                                <div><i class="uil uil-comment-alt-dots h2 mr-2"></i></div>
-                                <h6 class="text-left title font-weight-normal mb-0">
-                                    Coaching
-                                </h6>
-                            </div>
-                        </a><!--end nav link-->
-                    </li><!--end nav item-->
-                </ul><!--end nav pills-->
-            </div><!--end col-->
-
-            <div class="col-md-8 col-12 mt-4 pt-2">
-                <div class="tab-content" id="pills-tabContent">
-                    <div class="tab-pane fade bg-white p-4 show active" id="developing" role="tabpanel" aria-labelledby="webdeveloping">
+<section class="section d-md-none" id="Individual">
+    <div class="">
+        <h4 class="title mb-n1 container">For Individual</h4>
+        <div class="row">
+            <div class="col-md-8 col-12 pt-2">
+                <div class="">
+                    <div class="container p-4" id="developing"  aria-labelledby="webdeveloping">
                         <div class="row align-items-center">
-                            <div class="col-lg-4 col-md-6 row">
-                                <img src="images/diatron/integration.png" alt="" class="img-fluid">
-                                <!--                                <img src="images/diatron/dia-dashboard.png" alt="" class="img-fluid col-md-6">-->
-                            </div>
-                            <!--end col-->
-
                             <div class="col-lg-8 col-md-6 mt-4 mt-lg-0 pt- pt-lg-0">
                                 <div class="ml-lg-4">
                                     <div class="section-title mb-4 pb-2">
@@ -505,17 +438,12 @@
                                     <!--                        </div>-->
                                 </div>
                             </div>
+                            <!--end col-->
                         </div>
                     </div><!--end teb pane-->
 
-                    <div class="tab-pane fade bg-white p-4" id="data-analise" role="tabpanel" aria-labelledby="database">
-                        <div class="row align-items-center">
-                            <div class="col-lg-4 col-md-6 row">
-                                <img src="images/diatron/log.png" alt="" class="img-fluid">
-                                <!--                                <img src="images/diatron/dia-dashboard.png" alt="" class="img-fluid col-md-6">-->
-                            </div>
-                            <!--end col-->
-
+                    <div class="p-4" id="data-analise"  style="background: #e1f3ff">
+                        <div class="row align-items-center container">
                             <div class="col-lg-8 col-md-6 mt-4 mt-lg-0 pt- pt-lg-0">
                                 <div class="ml-lg-4">
                                     <div class="section-title mb-4 pb-2">
@@ -535,6 +463,7 @@
                                     </div>
                                 </div>
                             </div>
+                            <!--end col-->
 
                                     <!--                        <div class="watch-video mt-4 pt-2">-->
                                     <!--                            <a href="https://1.envato.market/4n73n" target="_blank" class="btn btn-primary mb-2">Read More <i data-feather="chevron-right" class="fea icon-sm"></i></a>-->
@@ -543,13 +472,8 @@
                                 </div>
                     </div><!--end teb pane-->
 
-                    <div class="tab-pane fade bg-white p-4" id="predictive" role="tabpanel" aria-labelledby="analysis">
-                        <div class="row align-items-center">
-                            <div class="col-lg-4 col-md-6 row">
-                                <img src="images/diatron/predict.png" alt="" class="img-fluid">
-                            </div>
-                            <!--end col-->
-
+                    <div class=" p-4" id="predictive"  aria-labelledby="analysis">
+                        <div class="row align-items-center container">
                             <div class="col-lg-8 col-md-6 mt-4 mt-lg-0 pt- pt-lg-0">
                                 <div class="ml-lg-4">
                                     <div class="section-title mb-4 pb-2">
@@ -579,14 +503,8 @@
                         </div>
                     </div><!--end teb pane-->
 
-                    <div class="tab-pane fade bg-white p-4" id="security" role="tabpanel" aria-labelledby="server">
-                        <div class="row align-items-center">
-                            <div class="col-lg-4 col-md-6 row">
-                                <img src="images/diatron/statistics_details.png" alt="" class="img-fluid">
-                                <!--                                <img src="images/diatron/dia-dashboard.png" alt="" class="img-fluid col-md-6">-->
-                            </div>
-                            <!--end col-->
-
+                    <div class="p-4" id="security"  style="background: #e5e5e5">
+                        <div class="row align-items-center container">
                             <div class="col-lg-8 col-md-6 mt-4 mt-lg-0 pt- pt-lg-0">
                                 <div class="ml-lg-4">
                                     <div class="section-title mb-4 pb-2">
@@ -614,14 +532,8 @@
                         </div>
                     </div><!--end teb pane-->
 
-                    <div class="tab-pane fade bg-white p-4" id="designing" role="tabpanel" aria-labelledby="webdesigning">
-                        <div class="row align-items-center">
-                            <div class="col-lg-4 col-md-6 row">
-                                <img src="images/diatron/dia-home.png" alt="" class="img-fluid">
-<!--                                <img src="images/diatron/dia-dashboard.png" alt="" class="img-fluid col-md-6">-->
-                            </div>
-                            <!--end col-->
-
+                    <div class=" bg-white p-4" id="designing">
+                        <div class="row align-items-center container">
                             <div class="col-lg-8 col-md-6 mt-4 mt-lg-0 pt- pt-lg-0">
                                 <div class="ml-lg-4">
                                     <div class="section-title mb-4 pb-2">
@@ -651,7 +563,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div><!--end teb pane-->
+                    </div>
                 </div>
         <!--end tab content-->
             </div><!--end col-->
@@ -1545,9 +1457,9 @@
     });
 </script>
 <script>
-    // if (window.screen.width < 768) {
-    //     $("#pinContainer").remove();
-    // }
+    if (window.screen.width < 768) {
+        $("#pinContainer").remove();
+    }
 </script>
 </body>
 
